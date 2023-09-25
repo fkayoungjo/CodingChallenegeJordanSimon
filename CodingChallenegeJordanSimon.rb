@@ -1,8 +1,8 @@
 def solution(s)
 
   #Split input string and create hash for each photo
-  photos = s.lines.map do |line|
-    attributes = line.strip.split(', ')
+  photos = s.split("\n").map do |line|
+    attributes = line.split(', ')
     {
       name: attributes[0].split('.').first,
       extension: attributes[0].split('.').last,
