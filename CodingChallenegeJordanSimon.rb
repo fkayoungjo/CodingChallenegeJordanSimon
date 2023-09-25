@@ -12,11 +12,9 @@ def solution(s)
   end
 
   #Group photos by city
-
   grouped_photos = photos.group_by { |photo| photo[:city] }
 
   #Sort and assign numbers to photos within each group
-
   grouped_photos.each do |_city, group|
     group.sort_by! { |photo| photo[:date_time] }
     num_photos = group.size
@@ -27,9 +25,9 @@ def solution(s)
   end
 
   #Output
-  
   result = photos.map { |photo| photo[:new_name] }.join("\n")
   result
+  
 end
 
 
