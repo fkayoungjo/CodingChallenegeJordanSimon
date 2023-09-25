@@ -20,7 +20,7 @@ def solution(s)
   grouped_photos.each do |_city, group|
     group.sort_by! { |photo| photo[:date_time] }
     num_photos = group.size
-    num_digits = numH_photos.to_s.length
+    num_digits = num_photos.to_s.length
     group.each_with_index do |photo, index|
       photo[:new_name] = "#{photo[:city]}#{(index + 1).to_s.rjust(num_digits, '0')}.#{photo[:extension]}"
     end
