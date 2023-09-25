@@ -27,6 +27,7 @@ def solution(s)
   end
 
   #Output
+  
   result = photos.map { |photo| photo[:new_name] }.join("\n")
   result
 end
